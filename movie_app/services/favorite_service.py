@@ -1,12 +1,14 @@
 import json
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Folder where this file lives
+# Go two directories up from services, then into db/users.json
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 USERS_DB = os.path.join(BASE_DIR, "db", "users.json")
 
 class FavoriteService:
     def __init__(self):
         if not os.path.exists(USERS_DB):
+            os.makedirs(os.path.dirname(USERS_DB), exist_ok=True)
             with open(USERS_DB, "w") as f:
                 json.dump({}, f)
 
