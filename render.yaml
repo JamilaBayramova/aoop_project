@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: chatroom-server
+    env: python
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python movie_app/chatrooms/chatserver.py
+    autoDeploy: true
+
+  - type: web
+    name: main-server
+    env: python
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python movie_app/server.py
+    autoDeploy: true
