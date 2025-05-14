@@ -9,8 +9,8 @@ import requests
 from movie_app.services.search_service import SearchService
 from PIL import Image, ImageDraw
 
-HOST = 'chatroom-server.onrender.com'  # For chatroom server connection
-PORT = 5050  # or the port your Render service uses, often Render sets it dynamically — usually 10000+ or default you set
+HOST = 'aoop-project-1.onrender.com'  # Your actual Render server hostname
+PORT = 10000  # The port your server listens on
 
 # ----- Network Communication -----
 def send_request(action, data):
