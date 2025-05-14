@@ -1,8 +1,9 @@
 import socket
 import threading
+import os
 
-HOST = '127.0.0.1'
-PORT = 5050
+HOST = '0.0.0.0'  # Bind to all interfaces
+PORT = int(os.getenv('PORT', 5050))  # Use Render's PORT environment variable or default to 5050
 clients = []
 
 def broadcast(msg, sender_sock):
