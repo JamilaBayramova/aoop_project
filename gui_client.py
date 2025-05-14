@@ -8,8 +8,9 @@ import io
 import requests
 from movie_app.services.search_service import SearchService
 
-HOST = '127.0.0.1'
-PORT = 5000
+HOST = 'chatroom-server.onrender.com'  # For chatroom server connection
+PORT = 5050  # or the port your Render service uses, often Render sets it dynamically — usually 10000+ or default you set
+
 
 # ----- Network Communication -----
 def send_request(action, data):
