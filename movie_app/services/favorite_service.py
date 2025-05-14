@@ -1,7 +1,8 @@
 import json
 import os
 
-USERS_DB = "db/users.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Folder where this file lives
+USERS_DB = os.path.join(BASE_DIR, "db", "users.json")
 
 class FavoriteService:
     def __init__(self):
